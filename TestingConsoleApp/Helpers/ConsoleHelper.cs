@@ -4,10 +4,8 @@
     {
         internal static void PrintArray(int[] array)
         {
-            foreach (var item in array)
-            {
-                Console.Write(String.Concat(item, ", "));
-            }
+            string[] elements = array.Select(x => x.ToString()).ToArray();
+            Console.Write(String.Join(", ", elements));
         }
     }
 }
